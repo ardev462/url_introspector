@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>URL Introspector</title>
+   <style>
+    h2 {
+      font-size: 12pt;
+    }
+    div {
+      font-size: 12px;
+      margin-top: 5px;
+    }
+    body{
+      width: 150px;
+    }
+    #more{
+      margin-top: 10px;
+    }
+    input{
+      width: 30px;
+    }
+   </style>
+       
+  <script src="popup.js" type="module"></script>
+ </head>
+ <body>
+  <h2>Quick Configuration</h2>
+  <div>
+    <button id="b1" title="Use the last section of the URL for the hyperlink text">Last part of URL</button>
+  </div>
+  <div>
+    <button id="b2|1" title="Use the last 2 sections of the URL for the hyperlink text">Last 2 parts</button>
+  </div>
+  <div>
+    <button id="b3|2|1" title="Use the last 3 sections of the URL for the hyperlink text">Last 3 parts</button>
+  </div>
+  <div>
+    Separator text
+    <input id="separator" title="Use these characters to separate different parts of the hyperlink text" value=" > " maxlength="5"/>
+  </div>
+  <div id="more">
+    <a href="javascript:void(0)" id="showConfig">More options</a>
+  </div>
+  
+ </body>
+</html>

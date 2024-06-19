@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>URL Introspector</title>
+    <style>
+            body {
+              font-size: 10pt;
+              font-family: Arial, Helvetica, sans-serif;
+            }
+            #live {
+                border: 1px solid black;
+                max-width: fit-content;
+                padding: 10px;
+                margin: 10px;
+                line-height: 2;
+            }
+            #result{
+                font-style: italic;
+            }
+            #liveExampleHeader{
+                font-weight: bold;
+                font-size: larger;
+                margin-bottom: 5px;
+            }
+    </style>
+  </head>
+  <body>
+    <h1>URL Introspector</h1>
+
+    <h2>Summary</h2>
+    <div>
+      This extension replaces 'raw' web URLs with human readable hyperlinks using text contained within the URL itself and a few simple rules.
+      <p>This works best on web sites that follow a convention for page naming (as many do) whereby a description of the page content 
+        is used to create the page name (or breadcrumb path) together with additional characters such as spaces or underscores to delineate words.
+      </p>
+      <p>
+        URL Introspector allows you to define what parts of the URL you want to use in your hyperlink text and to control some of the formatting
+       such as capitalisation and token replacement in the link text
+      </p>
+      <p>
+        Configuration settings are saved to browser storage so your previous choices will remain until you change them.
+      </p>
+  </div>
+
+    <h2>Options</h2>
+
+    <h3>Text Formatting</h3>
+    <div>
+       Capitalise the first letter of every word in the hyperlink text <input type="checkbox" id="titleCase" />
+    </div>
+
+    <h3>Character Substitution</h3>
+    <div>
+       Replace + _ or - characters with spaces in hyperlink text <input type="checkbox" id="substitution" />
+    </div>
+
+    <h3>Text Template</h3>
+    <div>
+        <p>
+          Given a URL of the format : <b>https://www.abcde.com/3/2/1/filename.html</b>
+         </p>
+        <p>
+        Where 3,2,1 are postitional placeholders for the text in the corresponding part of the URL and the special 
+        placeholder 'filename' denotes the name of the file without the extension...
+        </p>
+        <p>
+          Use the following template to display the link text
+          <input type="text" id="template" value="3 : 2 > 1 (filename)"/>
+        </p>
+        <p>
+        You can use as many or as few elements as you like in the template. Often, it could be as simple as just the number 1.
+        </p>
+         <div id="live">
+            <span id="liveExampleHeader">Live example</span> (change the text template and options above to see the effect) 
+        
+            <div id="url">https://something.com/files/guides/user/how-to-log-in/index.html</div>
+            <div style="margin-left: 10px;">
+                becomes...
+            </div>
+            
+            <a id="result"></a>
+        </div>
+    </div>
+    
+    <p>
+      <b>Remember to click the Save button when you have decided on your template.</b>
+    </p>
+    <button id="save">Save</button>
+    <div id="status"></div>
+    
+    <script src="options.js" type="module"></script>
+  </body>
+</html>

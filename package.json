@@ -1,0 +1,40 @@
+{
+  "name": "url_introspector",
+  "version": "1.0.0",
+  "description": "Chrome extension to create a hyperlink from the text within a URL",
+  "main": "index.js",
+  "type": "module",
+  "license": "AGPL-version-3.0",
+  "private": false,
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": "",
+  "keywords": [],
+  "author": {
+    "name": "Andrew Rowland",
+    "email": "ar.dev462@gmail.com",
+    "url": "https://github.com/ardev462/url_introspector.git"
+  },
+  "contributors": [],
+  "scripts": {
+    "dev": "",
+    "test": "",
+    "clean": "rimraf dist",
+    "compile": "npx tsc",
+    "copy-assets": "copyfiles -u 1 src/assets/**/* src/*.json src/*.html src/*.md dist/",
+    "build": "npm run clean && npm run compile && npm run copy-assets"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "typescript": "^5.4.5",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^5.0.7"
+  }
+}
