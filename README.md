@@ -8,7 +8,7 @@ This works best on web sites that follow a convention for page naming (as many d
 Configuration settings are saved to browser storage so your preferences will remain until you change them.
 
 ## Configuration
-See the Options page for configuration information. The only part you should need to change is the text template. This defines placeholders for different parts of the URL you wish to use and is quite intuitive after you spend a minute testing out how it works. 
+See the Options page for configuration information. The text template defines placeholders for different parts of the URL you wish to use for hyperlink text. The syntax is simplistic and is quite intuitive after you spend a minute testing out how it works. 
 
 ## Usage
 To use the extension you need an editable field such as an email body or a rich text editor that can handle HTML.
@@ -20,14 +20,20 @@ To use it, there are 2 modes:
 - Plain text URL (no link)
     - Select the whole URL and choose the corresponding option in the context menu. If the selected text is not a valid URL you will see an error message.
 
-## Building
+## Licensing
+*URL Introspector* has been released as open source under the terms of the MIT license.
+The source code has been uploaded to GitHub and is available here: https://github.com/ardev462/url_introspector
+
+## Building the extension
+*URL Introspector* is available via the Chrome web store so there is no explicit need to build anything unless you wish to tinker.
+
 The extension itself is written in TypeScript. To run it in Chrome, this needs to be compiled into JavaScript.
 The steps to do this are as follows:
-- Install Node.js on your PC - this is required for the build process
+- Install *Node.js* on your PC - this is required for the build process
 - Check out the GitHub project from https://github.com/ardev462/url_introspector.git
-- cd to root directory
+- cd to the root directory
 - run the following commands in a terminal 
   - npm install
   - npm run build
 
-The build process should be OS agnostic. The resulting dist/ folder will contain the chrome extension in exploded form. This can be run as an 'unpacked' extension in Chrome if you turn on developer mode and point it at this folder.
+The build process should work in any operating system. The resulting dist/ folder will contain the chrome extension in exploded form. This can be run as an 'unpacked' extension in Chrome if you turn on developer mode and point it at the dist/ folder.
