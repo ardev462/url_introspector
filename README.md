@@ -17,8 +17,17 @@ The context menu option (URL Introspector) will not show unless you are in an ed
 To use it, there are 2 modes:
 - Existing linked URL 
     - Right click (control-click on Mac) and there should be an option to change the link to a human readble form
+![Existing link](screenshots/url_introspector_Link.png "Existing link")
+
 - Plain text URL (no link)
     - Select the whole URL and choose the corresponding option in the context menu. If the selected text is not a valid URL you will see an error message.
+![Selected text](screenshots/url_introspector_SelectedText.png "Selected text")
+
+## Demo
+Below is an animated GIF illustrating basic usage in both of the above modes of operation
+
+![Demo](screenshots/url_introspector_usage.gif "Demo")
+
 
 ## Licensing
 *URL Introspector* has been released as open source under the terms of the MIT license.
